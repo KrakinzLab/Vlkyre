@@ -162,7 +162,7 @@ await ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇.downloadAndSaveMediaMessage(FILEOBJEC
 var Convert_From = `${FILEID}.mp4`;
 var Convert_To = `_${FILEID}_.mp4`;
 exec(
-`ffmpeg -i ${Convert_From} -af "atempo=0.8" ${Convert_To}`,
+`ffmpeg -i ${Convert_From} -af "bass=g=10,dynaudnorm=f=150" ${Convert_To}`,
 async (error) => {
 cleanRF.cleanRF(Convert_From);
 if (error) {
