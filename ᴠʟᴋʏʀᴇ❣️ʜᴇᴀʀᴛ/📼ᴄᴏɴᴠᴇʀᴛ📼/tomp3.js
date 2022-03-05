@@ -7,12 +7,12 @@ const ᴠʟᴋʏʀᴇ_Buttons = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛ
 const ᴠʟᴋʏʀᴇ_Static = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/ᴠʟᴋʏʀᴇ_Static`);
 const { MessageType, Mimetype } = require(`@adiwajshing/baileys`);
 const cleanRF = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/cleanRF`);
-const ocrSpace = require(`ocr-space-api-wrapper`);
 const ꜰᴜᴄᴋ = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/oShit`);
 const _𝔏𝔞𝔟_ = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/_𝔏𝔞𝔟_`);
 var ᴋᴇɪᴇx = new RegExp(_𝔏𝔞𝔟_.FOXTROT, `g`);
 var ᴋᴇɪ = /\/\^\[(.*)+\]\/\g/g.exec(ᴋᴇɪᴇx)[1];
 const vers = require(`../../package.json`);
+const { exec } = require(`child_process`);
 const fs = require(`fs`);
 var path = require(`path`);
 var scriptName = path.basename(__filename);
@@ -22,7 +22,7 @@ var newScpt = scriptName.slice(0, -3).toLowerCase();
 `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
 module.exports = {
 name: newScpt,
-ᴠʟᴋʏʀᴇӄǟɨʐօ: `Use this command to obtain text from an image by  *${ᴋᴇɪ}ocr*  command.`,
+ᴠʟᴋʏʀᴇӄǟɨʐօ: `*${ᴋᴇɪ}tomp3* _reply video_`,
 async handle(ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, KryChat, ᴠʟᴋʏʀᴇ, 𝖆𝖗𝖌𝖚𝖒𝖊𝖓𝖙, ꜱɪᴛʀᴀᴘ, Clock, Ping) {
 try {
 const ʟɴᴀᴍᴇ = ᴠʟᴋʏʀᴇ.sender;
@@ -136,94 +136,57 @@ KryChat,
 `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
 /*              (𝐜)𝐕𝐥𝐤𝐲𝐫𝐞 𝐢𝐬 𝐚 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞-𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!*/
 `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
-if (ᴠʟᴋʏʀᴇ.isImage) {
-var replyChatObject = {
-message: KryChat.message,
-};
-var imageId = KryChat.key.id;
-const fileName = `${__dirname}/img-` + imageId;
-const filePath = await ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇.downloadAndSaveMediaMessage(
-replyChatObject,
-fileName
-);
-const text = await ocrSpace(filePath, {
-apiKey: _𝔏𝔞𝔟_.OCR,
-});
-var Msg = text.ParsedResults[0].ParsedText;
-if (Msg === ``) {
-ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇
-.sendMessage(
-ᴠʟᴋʏʀᴇ.chatId,
-`Couldn't find text in the image`,
-MessageType.text,
-{ quoted: KryChat }
-)
-.catch((error) => ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat));
-}
-ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇
-.sendMessage(ᴠʟᴋʏʀᴇ.chatId, Msg, MessageType.text, {
-quoted: KryChat,
-})
-.catch((error) => ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat));
-fs.unlink(filePath),
-(error) => {
-if (error) console.log(error);
-else {
-console.log(`Deleted!`);
-}
-};
-}
-
-if (ᴠʟᴋʏʀᴇ.isReplyImage) {
-var replyChatObject = {
+if (ᴠʟᴋʏʀᴇ.isReplyVideo) {
+var FILEOBJECT = {
 message:
 KryChat.message.extendedTextMessage.contextInfo.quotedMessage,
 };
-var imageId = KryChat.message.extendedTextMessage.contextInfo.stanzaId;
-const fileName = `${__dirname}/img-` + imageId;
-const filePath = await ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇.downloadAndSaveMediaMessage(
-replyChatObject,
-fileName
+var FILEID = KryChat.message.extendedTextMessage.contextInfo.stanzaId;
+console.log(FILEOBJECT);
+await ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇.downloadAndSaveMediaMessage(
+FILEOBJECT,
+`${__dirname}/${FILEID}`
 );
-const text = await ocrSpace(filePath, {
-apiKey: _𝔏𝔞𝔟_.OCR,
-});
-var Msg = text.ParsedResults[0].ParsedText;
-if (Msg === ``) {
-ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇
-.sendMessage(
+var Convert_From = `${__dirname}/${FILEID}.mp4`;
+var Convert_To = `${__dirname}/${FILEID}_${Math.floor(
+Math.random() * 10000
+)}.mp3`;
+exec(`ffmpeg -i ${Convert_From} ${Convert_To}`, async (error) => {
+cleanRF.cleanRF(Convert_From);
+if (error) {
+return console.log(`Err: ${error}`);
+} else {
+await ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇.sendMessage(
 ᴠʟᴋʏʀᴇ.chatId,
-`Couldn't find text in the image`,
-MessageType.text,
-{ quoted: KryChat }
-)
-.catch((error) => ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat));
-}
-ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇
-.sendMessage(ᴠʟᴋʏʀᴇ.chatId, Msg, MessageType.text, {
+fs.readFileSync(Convert_To),
+MessageType.audio,
+{
+mimetype: `audio/mp4`,
 quoted: KryChat,
-})
-.catch((error) => ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat));
-fs.unlink(filePath),
-(error) => {
-if (error) console.log(error);
-else {
-console.log(`Deleted!`);
 }
-};
+);
+cleanRF.cleanRF(Convert_To);
 }
-await ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇
-.sendMessage(
-ᴠʟᴋʏʀᴇ.chatId,
-`Please tag a valid message.`,
-MessageType.text,
-{ quoted: KryChat }
-)
-.catch((error) => ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat));
+});
+} else {
+var 𝓜Usage = ꜱɪᴛʀᴀᴘ.get(ᴠʟᴋʏʀᴇ.commandName);
+var ᴍɪᴢᴜᴋɪᴍᴏʀᴇ =
+𝓜Usage.ᴠʟᴋʏʀᴇӄǟɨʐօ === undefined ? `Null` : 𝓜Usage.ᴠʟᴋʏʀᴇӄǟɨʐօ;
+const ᴀʀɢᴜᴍᴇɴᴛ = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/ɴᴇᴇᴅᴀʀɢᴜᴍᴇɴᴛ`);
 userBadge.Limits = userBadge.Limits + 1;
 await userBadge
 .save()
 .catch((error) => ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat));
+return ᴀʀɢᴜᴍᴇɴᴛ.ɴᴇᴇᴅᴀʀɢᴜᴍᴇɴᴛ(
+ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
+KryChat,
+ᴠʟᴋʏʀᴇ,
+ʟɴᴀᴍᴇ,
+ᴘɴᴀᴍᴇ,
+ᴠʟᴋʏʀᴇ.commandName,
+ᴍɪᴢᴜᴋɪᴍᴏʀᴇ
+);
+}
 }
 );
 `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
