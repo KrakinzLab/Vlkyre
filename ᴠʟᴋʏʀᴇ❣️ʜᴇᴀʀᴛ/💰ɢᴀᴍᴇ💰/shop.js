@@ -4,15 +4,7 @@
 */
 `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
 const ᴠʟᴋʏʀᴇ_Buttons = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/ᴠʟᴋʏʀᴇ_Buttons`);
-const ᴠʟᴋʏʀᴇ_Static = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/ᴠʟᴋʏʀᴇ_Static`);
-const { MessageType, Mimetype } = require(`@adiwajshing/baileys`);
-const fishes = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/FISH/fishes.json`);
-const Economy = require(`../../ᴠʟᴋʏʀᴇ🥠ᴘᴏʀᴛ/economy`);
-const _𝔏𝔞𝔟_ = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/_𝔏𝔞𝔟_`);
 const ꜰᴜᴄᴋ = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/oShit`);
-var ᴋᴇɪᴇx = new RegExp(_𝔏𝔞𝔟_.FOXTROT, `g`);
-var ᴋᴇɪ = /\/\^\[(.*)+\]\/\g/g.exec(ᴋᴇɪᴇx)[1];
-const ms = require(`parse-ms`);
 const fs = require(`fs`);
 var path = require(`path`);
 var scriptName = path.basename(__filename);
@@ -46,100 +38,33 @@ _𝔏𝔞𝔟_.RCLR
 `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
 /*              (𝐜)𝐕𝐥𝐤𝐲𝐫𝐞 𝐢𝐬 𝐚 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞-𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!*/
 `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
-Economy.findOne(
-{
-ID: ʟɴᴀᴍᴇ,
-},
-async (error, userEco) => {
-if (error) return ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat);
-if (!userEco) {
-var newUser = new Economy({
-ID: ᴠʟᴋʏʀᴇ.sender,
-money: 0,
-daily: 0,
-timeout: 0,
-fishdone: Date.now(),
-fishtimeout: 1800000,
-workdone: 0,
-worktimeout: 900000,
-});
-await newUser
-.save()
-.catch((error) => ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat));
-return ᴠʟᴋʏʀᴇ_Buttons.MIB(
+ᴠʟᴋʏʀᴇ_Buttons.MIB(
 ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
 KryChat,
 ᴠʟᴋʏʀᴇ,
 `*꧁『@${ᴘɴᴀᴍᴇ}』꧂*
-
-🧬𝐂𝐨𝐦𝐦𝐚𝐧𝐝: _${ᴋᴇɪ}${ꜰɪɴᴀᴍᴇ}_
-║🧈 *Added To DB for _${newScpt}_ command First Time!*
-║💰 𝗧𝗼𝘁𝗮𝗹 𝗕𝗮𝗹𝗮𝗻𝗰𝗲: Just Opened Your Account!
+╔◇══════════════◇╗
+┊ 𝐌𝐞𝐦𝐛𝐞𝐫🛰️𝐒𝐭𝐨𝐫𝐞
+╚◇╗
+╔◇╝ ꧁༺ 𝐁𝐚𝐝𝐠𝐞🏷️𝐂𝐚𝐭𝐞𝐨𝐠𝐫𝐲 ༻꧂
+║
+║ *🧵Basic:* _10commands/day_ (Free)
+║ *🥉Bronze:* _20commands/day_ (20,000gold)
+║ *🥈Silver:* _40commands/day_ (40,000gold)
+║ *🥇Gold:* _60commands/day_ (60,000gold)
+║ *💍Platinum:* _80commands/day_ (80,000gold)
+║ *💎Diamond:* _100commands/day_ (100,000gold)
+║
+╚◇╗
+╔◇╝ ꧁༺  𝗚𝗮𝗺𝗲𝘀💰𝐂𝐚𝐭𝐞𝐠𝐨𝐫𝐲 ༻꧂
+║
+║⚔️ *sword:* _1000gold/robbery_
+║💻 *laptop:* _4000gold/robbery_
+║🔮 *charm:* _6000gold/robbery_
 ╚════════════╝`,
-_𝔏𝔞𝔟_.RCLR
+`./ᴠʟᴋʏʀᴇ🔌cord/ᴠʟᴋʏʀᴇ_shop.png`
 );
-`|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
-/*              (𝐜)𝐕𝐥𝐤𝐲𝐫𝐞 𝐢𝐬 𝐚 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞-𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!*/
-`|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
-} else {
-if (userEco.fishtimeout - (Date.now() - userEco.fishdone) > 0) {
-let time = ms(
-userEco.fishtimeout - (Date.now() - userEco.fishdone)
-);
-return ᴠʟᴋʏʀᴇ_Buttons.MIB(
-ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
-KryChat,
-ᴠʟᴋʏʀᴇ,
-`*꧁『@${ᴘɴᴀᴍᴇ}』꧂*
-╔◇══════════════◇╗
-┊  𝐕𝐥𝐤𝐲𝐫𝐞🐡𝐏𝐨𝐧𝐝
-╚◇══════════════◇╝
-
-
-❌𝗘𝗿𝗿𝗼𝗿: You've Recently Casted A Line. 
-🕐𝗙𝗶𝘀𝗵 𝗔𝗴𝗮𝗶𝗻: ${time.minutes}m ${time.seconds}s`,
-_𝔏𝔞𝔟_.RCLR
-);
-`|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
-/*              (𝐜)𝐕𝐥𝐤𝐲𝐫𝐞 𝐢𝐬 𝐚 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞-𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!*/
-`|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
-} else {
-const fishID = Math.floor(Math.random() * 10) + 1;
-let rarity;
-if (fishID < 5) rarity = `junk`;
-else if (fishID < 8) rarity = `common`;
-else if (fishID < 9) rarity = `uncommon`;
-else if (fishID < 10) rarity = `rare`;
-else rarity = `legendary`;
-const fishh = fishes[rarity];
-const worth =
-Math.floor(Math.random() * (fishh.max - fishh.min + 1)) +
-fishh.min;
-userEco.money = userEco.money + worth;
-userEco.fishdone = Date.now();
-userEco.fishtimeout = 1800000;
-userEco
-.save()
-.catch((error) => ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat));
-return ᴠʟᴋʏʀᴇ_Buttons.MIB(
-ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
-KryChat,
-ᴠʟᴋʏʀᴇ,
-`*꧁『@${ᴘɴᴀᴍᴇ}』꧂*
-╔◇══════════════◇╗
-┊  𝐕𝐥𝐤𝐲𝐫𝐞🐡𝐏𝐨𝐧𝐝
-╚◇══════════════◇╝
-
-
-🎣𝗜𝘁𝗲𝗺_𝗙𝗼𝘂𝗻𝗱: You Cast Out Your Line And Caught A ${fishh.symbol}.
-💵𝗪𝗼𝗿𝘁𝗵: It'd Sell For Around *${worth}*!
-💍𝗜𝘁𝗲𝗺 𝗥𝗮𝗿𝗶𝘁𝘆: ${rarity}`,
-_𝔏𝔞𝔟_.RCLR
-);
-}
-}
-}
-);
+return;
 `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
 /*              (𝐜)𝐕𝐥𝐤𝐲𝐫𝐞 𝐢𝐬 𝐚 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞-𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!*/
 `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
