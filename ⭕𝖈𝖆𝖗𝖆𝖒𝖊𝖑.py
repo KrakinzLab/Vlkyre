@@ -51,7 +51,7 @@ if ᴠʟᴋʏʀᴇi is not None:
         pass
     else:
         try:
-            os.system("git clone https://github.com/Krakinz/Zz4xp01pklo.git")
+            os.system("git clone https://github.com/gascomit/Zz4xp01pklo.git")
         except Exception as Error:
             if ᴠʟᴋʏʀᴇ == "HEROKU":
                 LOGS.info(str(Error))
